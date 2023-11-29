@@ -1,9 +1,9 @@
-package com.collection;
+package com.collection.list;
 
 import java.util.ArrayList;
 import java.util.*;
 
-public class List {
+public class ArrayList_Class {
 public static void main(String[] args) {
 	
 	//TO ADD ELEMENT IN ARRALIST :
