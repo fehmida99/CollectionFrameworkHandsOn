@@ -88,8 +88,8 @@ public class HashSet {
 		});
 
 		// To add all type of element like string integer (NON TYPE Safe):
+		System.out.println("*****Lets see about For-Each Method(UNTYPE SAFE) for traversing****");
 
-		
 		System.out.println();
 		java.util.HashSet hs = new java.util.HashSet();
 
@@ -100,12 +100,10 @@ public class HashSet {
 		hs.add(true);
 		hs.add(39.54f);
 		hs.add("End");
-		
-		hs.forEach(e->{
+
+		hs.forEach(e -> {
 			System.out.println(e);
 		});
-		
-		
 
 	}
 }
