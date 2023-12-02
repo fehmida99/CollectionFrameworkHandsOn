@@ -1,4 +1,4 @@
-package com.masai.Arrays;
+package com.collection.Arrays;
 
 import java.util.Arrays;
 
