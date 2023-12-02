@@ -1,0 +1,182 @@
+Here are 20 interview questions along with their answers, focusing on the `Queue` interface and its implemented classes (`Deque`, `ArrayDeque`, and `PriorityQueue`):
+
+**1. Q: What is the primary purpose of the `Queue` interface in Java?**
+
+   A: The `Queue` interface represents a collection designed for holding elements before processing. It follows the First-In-First-Out (FIFO) order.
+
+
+
+
+
+**2. Q: How does a `Deque` (Double-ended Queue) differ from a regular `Queue`?**
+
+   A: A `Deque` allows elements to be added or removed from both ends, making it a double-ended queue. It extends the `Queue` interface and provides additional methods for deque operations.
+
+
+
+
+
+**3. Q: What is the significance of the `add()` and `offer()` methods in the `Queue` interface?**
+
+   A: Both `add()` and `offer()` are used to add an element to the queue. However, `add()` throws an exception if the insertion fails, while `offer()` returns a special value (typically `false`).
+
+
+
+
+
+**4. Q: How does the `poll()` method differ from `remove()` in the `Queue` interface?**
+
+   A: Both methods remove and return the head of the queue, but if the queue is empty, `poll()` returns `null`, while `remove()` throws a `NoSuchElementException`.
+
+
+
+
+
+**5. Q: Explain the role of the `peek()` method in the `Queue` interface.**
+
+   A: The `peek()` method retrieves, but does not remove, the head of the queue. It returns `null` if the queue is empty.
+
+
+
+
+
+**6. Q: What is the primary advantage of using an `ArrayDeque` over a `LinkedList` as an implementation of the `Deque` interface?**
+
+   A: `ArrayDeque` has better performance for add and remove operations at both ends compared to `LinkedList`. It is not subject to the same performance overhead associated with node-based structures.
+
+
+
+
+
+**7. Q: How does the `PriorityQueue` class differ from other implementations of the `Queue` interface?**
+
+   A: `PriorityQueue` orders elements based on their natural order or a specified comparator. Elements with higher priority are dequeued before elements with lower priority.
+
+
+
+
+
+**8. Q: Can `null` elements be stored in a `PriorityQueue`?**
+
+   A: No, `PriorityQueue` does not allow `null` elements. Trying to insert a `null` element will result in a `NullPointerException`.
+
+
+
+
+
+**9. Q: How does the `Comparator` interface come into play with a `PriorityQueue`?**
+
+   A: A `PriorityQueue` can be instantiated with a `Comparator` to define the ordering of elements. If no comparator is provided, elements must implement the `Comparable` interface.
+
+
+
+
+
+
+**10. Q: What is the time complexity of basic operations (enqueue, dequeue) in a `PriorityQueue`?**
+
+    A: Enqueue and dequeue operations in a `PriorityQueue` have a time complexity of O(log n), where n is the number of elements in the queue.
+
+
+
+
+
+
+**11. Q: Can you provide an example of using a `Deque` for both stack and queue operations?**
+
+    A: Certainly! Using `Deque` for stack operations:
+    ```java
+    Deque<Integer> stack = new ArrayDeque<>();
+    stack.push(1);
+    stack.push(2);
+    int top = stack.pop(); // Removes and returns 2 (last-in, first-out)
+    ```
+
+
+
+
+
+
+**12. Q: What is the significance of the `offerFirst()` and `offerLast()` methods in a `Deque`?**
+
+    A: `offerFirst()` adds an element to the front of the deque, and `offerLast()` adds an element to the end. They are equivalent to `push()` and `offer()` for a stack and queue, respectively.
+
+
+
+
+
+
+
+**13. Q: How does the `remove()` method in a `PriorityQueue` differ from `poll()`?**
+
+    A: Both methods remove and return the head of the queue, but if the queue is empty, `remove()` throws a `NoSuchElementException`, while `poll()` returns `null`.
+
+
+
+
+
+
+**14. Q: Can you use a custom comparator with `ArrayDeque` or `Deque`?**
+
+    A: No, `ArrayDeque` and `Deque` do not support custom comparators. They focus on providing basic double-ended queue functionality without prioritization.
+
+
+
+
+
+
+
+**15. Q: Explain the role of the `descendingIterator()` method in the `Deque` interface.**
+
+    A: The `descendingIterator()` method returns an iterator over the elements in reverse order. It allows traversal of the deque from the tail to the head.
+
+
+
+
+
+
+**16. Q: How does the `toArray()` method work in the `Deque` interface, and what is its use case?**
+
+    A: The `toArray()` method returns an array containing all elements of the deque in the same order. It can be used to convert a deque to an array for further processing.
+
+
+
+
+
+
+**17. Q: What is the purpose of the `spliterator()` method in the `Deque` interface?**
+
+    A: The `spliterator()` method returns a late-binding and fail-fast spliterator over the elements of the deque. It can be used for parallel processing of elements.
+
+
+
+
+
+
+
+**18. Q: How does the `pollFirst()` method in a `Deque` differ from `pollLast()`?**
+
+    A: `pollFirst()` removes and returns the first element of the deque, while `pollLast()` removes and returns the last element. Both methods return `null` if the deque is empty.
+
+
+
+
+
+
+**19. Q: What is the primary benefit of using `PriorityQueue` over other collection classes for tasks requiring prioritization?**
+
+    A: `PriorityQueue` provides efficient removal of the highest-priority element, making it suitable for tasks where elements need to be processed based on their priority.
+
+
+
+
+
+
+**20. Q: Can a `PriorityQueue` be used to implement a min-heap and max-heap?**
+
+    A: Yes, by using a natural order comparator for min-heap or a custom comparator for max-heap, a `PriorityQueue` can be configured accordingly.
+
+
+
+
+

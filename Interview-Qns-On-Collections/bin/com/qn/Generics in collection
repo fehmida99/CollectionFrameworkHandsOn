@@ -1,0 +1,130 @@
+Here are 10 interview questions along with their answers focusing on generics in the Java Collection Framework:
+
+**1. Q: What is the purpose of generics in the Java Collection Framework?**
+
+   A: Generics provide a way to create classes, interfaces, and methods with placeholder types. In the context of collections, generics enable the creation of type-safe and reusable data structures.
+
+
+
+
+
+**2. Q: How is a generic class different from a non-generic class in the Collection Framework?**
+
+   A: A generic class allows the specification of types that it can work with, making it more flexible and type-safe. Non-generic classes, on the other hand, operate on `Object` types, leading to potential runtime errors.
+
+
+
+
+
+
+**3. Q: Can you provide an example of a generic class in the Collection Framework?**
+
+   A: Certainly! An example of a generic class is `ArrayList<E>`, where `E` is the type parameter representing the type of elements the list can hold.
+
+   ```java
+   ArrayList<String> stringList = new ArrayList<>();
+   ```
+
+
+
+
+
+
+**4. Q: How does the use of generics enhance type safety in collections?**
+
+   A: Generics ensure type safety by allowing the compiler to catch type mismatches at compile-time rather than at runtime. This prevents the possibility of class cast exceptions and improves code robustness.
+
+
+
+
+
+
+**5. Q: What is the significance of the diamond operator (`<>`) in Java generics?**
+
+   A: The diamond operator is used for type inference when creating an instance of a generic class. It allows you to create an instance without specifying the type arguments explicitly, relying on the compiler to infer them.
+
+   ```java
+   List<String> myList = new ArrayList<>();
+   ```
+
+
+
+
+
+
+**6. Q: How does a wildcard (`?`) work in the context of generics, and when is it commonly used?**
+
+   A: The wildcard `?` represents an unknown type. It is commonly used in situations where the actual type is not important or needs to be more flexible, such as in method parameters or when dealing with unknown types.
+
+   ```java
+   public void processList(List<?> myList) {
+       // Code that works with any type of list
+   }
+   ```
+
+
+
+
+
+
+**7. Q: What is the difference between upper-bounded (`<? extends T>`) and lower-bounded (`<? super T>`) wildcards?**
+
+   A: An upper-bounded wildcard (`<? extends T>`) allows the use of any type that is a subtype of `T`, while a lower-bounded wildcard (`<? super T>`) allows the use of any type that is a supertype of `T`.
+
+   ```java
+   public void processUpperBounded(List<? extends Number> numbers) { /* ... */ }
+   public void processLowerBounded(List<? super Integer> integers) { /* ... */ }
+   ```
+
+
+
+
+
+
+**8. Q: How can you create a generic method in Java?**
+
+   A: A generic method is defined by declaring its type parameters before the return type. Here's an example:
+
+   ```java
+   public <T> T findFirstElement(List<T> list) {
+       if (list.isEmpty()) {
+           return null;
+       }
+       return list.get(0);
+   }
+   ```
+
+
+
+
+
+
+**9. Q: What is the role of the `Collections.copy()` method in the context of generics?**
+
+   A: The `Collections.copy()` method is used to copy the elements from one list to another. It's particularly useful when dealing with generic lists, ensuring type safety during the copying process.
+
+   ```java
+   List<Integer> sourceList = Arrays.asList(1, 2, 3);
+   List<Integer> targetList = new ArrayList<>(Arrays.asList(4, 5, 6));
+   Collections.copy(targetList, sourceList);
+   ```
+   
+   
+   
+   
+   
+
+**10. Q: How can you restrict the types that can be used as type arguments in a generic class or method?**
+
+    A: You can use bounded wildcards to restrict the types that can be used as type arguments. For example, if you want to ensure that a type implements a specific interface, you can use an upper-bounded wildcard:
+
+    ```java
+    public class Example<T extends SomeInterface> {
+        // Class definition
+    }
+    ```
+
+
+
+
+

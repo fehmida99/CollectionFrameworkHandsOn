@@ -1,0 +1,257 @@
+1. Q: What is the Java Collection Framework?
+
+A: The Java Collection Framework is a set of classes and interfaces that provide a comprehensive and reusable solution to handle and manipulate groups of objects. It provides fundamental data structures like Lists, Sets, and Maps, along with algorithms for their manipulation.
+
+
+
+
+2. Q: Name some key interfaces in the Java Collection Framework.
+
+A: Some key interfaces include:
+
+Collection: The root interface for all collection types.
+List: An ordered collection that allows duplicate elements.
+Set: An unordered collection that does not allow duplicate elements.
+Map: A collection of key-value pairs.
+
+
+
+
+
+3. Q: What is the difference between a Set and a List?
+
+A: A Set is an unordered collection that does not allow duplicate elements, whereas a List is an ordered collection that allows duplicate elements.
+
+
+
+
+
+4. Q: Explain the difference between the HashMap and HashTable classes.
+
+A: Both classes implement the Map interface, but HashMap allows null values and one null key, whereas HashTable does not allow any null values or keys. Additionally, HashMap is not synchronized, making it more efficient in non-thread-safe scenarios.
+
+
+
+
+
+
+5. Q: What is the significance of the Iterator interface in the Collection Framework?
+
+A: The Iterator interface provides a way to iterate over elements in a collection sequentially. It allows you to traverse through the elements of a collection without exposing the underlying structure.
+
+
+
+
+
+6. Q: How does the ArrayList differ from the LinkedList in terms of implementation?
+
+A: ArrayList uses a dynamic array to store elements and is good for random access, while LinkedList uses a doubly-linked list and is more efficient for frequent insertions and deletions.
+
+
+
+
+7. Q: Explain the purpose of the Comparable and Comparator interfaces.
+
+A: The Comparable interface is used to define a natural ordering of elements within a class. The Comparator interface allows you to define multiple ways to compare objects, providing flexibility in sorting.
+
+
+
+
+
+8. Q: What is the purpose of the hashCode() and equals() methods in Java objects?
+
+A: The hashCode() method returns a hash code for an object, used by hash-based collections like HashMap. The equals() method is used to compare the equality of two objects and is essential for certain operations in collections.
+
+
+
+
+
+9. Q: How does the TreeSet class maintain elements in sorted order?
+
+A: TreeSet uses a Red-Black tree data structure to maintain elements in sorted order. This ensures efficient retrieval and insertion operations with a time complexity of O(log n).
+
+
+
+
+
+
+10. Q: Can you give an example of an immutable class in the Java Collection Framework?
+
+A: Yes, an example is the Collections.unmodifiableList() method, which returns an immutable view of the specified list. Once created, the list cannot be modified, providing a read-only view.
+
+
+
+
+
+11. Q: Explain the purpose of the CopyOnWriteArrayList class and when it might be preferred over other list implementations.
+
+A: CopyOnWriteArrayList is a thread-safe variant of ArrayList where all mutative operations (add, set, etc.) are implemented by making a fresh copy of the underlying array. It is preferred in scenarios where the list is traversed more frequently than modified.
+
+
+
+
+
+
+12. Q: What is the NavigableSet interface, and can you name a class that implements it?
+
+A: NavigableSet extends SortedSet to provide navigation methods for retrieval based on closest matches. An example class is TreeSet, which implements both SortedSet and NavigableSet.
+
+
+
+
+
+13. Q: How does the EnumSet class differ from other set implementations, and what kind of elements can it contain?
+
+A: EnumSet is specifically designed to work with enumerated types (enum). It is a high-performance set implementation that can only contain elements of a single enum type.
+
+
+
+
+
+
+14. Q: What is the role of the Collections.shuffle() method, and when might it be useful?
+
+A: Collections.shuffle() is used to randomly permute the specified list. It can be useful when you want to randomize the order of elements in a list, for example, in card games or randomized algorithms.
+
+
+
+
+
+
+15. Q: How does the WeakHashMap class differ from a regular HashMap, and what is its primary use case?
+
+A: WeakHashMap is a specialized implementation where keys are held by weak references. This means that if a key is not used elsewhere, it may be eligible for garbage collection, allowing the associated entry to be removed.
+
+
+
+
+
+
+16. Q: Explain the concept of a "view" in the context of the Collections framework.
+
+A: A "view" refers to an object that provides a read-only or a different perspective on a collection. For example, Collections.unmodifiableList() returns a view of the original list that cannot be modified.
+
+
+
+
+
+
+17. Q: What is the difference between the poll() and remove() methods in the Queue interface?
+
+A: Both methods remove and return the head of the queue, but if the queue is empty, poll() returns null, while remove() throws a NoSuchElementException.
+
+
+
+
+
+
+18. Q: How does the IdentityHashMap differ from other Map implementations?
+
+A: IdentityHashMap uses reference equality (==) instead of object equality (equals()) when comparing keys. It is particularly useful when you want to use the identity of objects as keys.
+
+
+
+
+
+
+19. Q: Explain the concept of a "capacity" and "load factor" in hash-based collections like HashMap.
+
+A: The capacity is the number of buckets in the hash table, and the load factor is a measure of how full the hash table is allowed to get before it is resized. When the number of elements exceeds the product of the load factor and the current capacity, the hash table is rehashed.
+
+
+
+
+
+20. Q: Can you provide an example of an immutable set in the Java Collection Framework?
+
+A: Yes, an example is Collections.unmodifiableSet(), which returns an immutable view of the specified set. Once created, the set cannot be modified, providing a read-only view.
+
+
+
+
+
+
+21. Q: Explain the difference between HashSet and LinkedHashSet.
+
+A: HashSet is an unordered collection that uses a hash table for storage. On the other hand, LinkedHashSet maintains the order of elements based on their insertion, combining the features of a hash table and a linked list.
+
+
+
+
+22. Q: What is the purpose of the Collections class in Java?
+
+A: The Collections class provides utility methods for working with collections, such as sorting, shuffling, and searching. It also includes methods for creating unmodifiable or synchronized views of collections.
+
+
+
+
+
+23. Q: How does the ConcurrentHashMap differ from a regular HashMap in terms of concurrency handling?
+
+A: ConcurrentHashMap is designed to be thread-safe without the need for explicit synchronization. It achieves this by dividing the map into segments, allowing multiple threads to operate on different segments concurrently.
+
+
+
+
+
+
+24. Q: What is the significance of the Deque interface, and can you provide an example of a class that implements it?
+
+A: Deque stands for "double-ended queue" and represents a collection that allows insertion and removal of elements at both ends. An example class implementing Deque is LinkedList.
+
+
+
+
+
+
+25. Q: How does the Arrays.asList() method work, and what is its common use case?
+
+A: Arrays.asList() converts an array to a fixed-size list. Changes to the list are reflected in the original array and vice versa. It is commonly used to bridge between array-based and collection-based APIs.
+
+
+
+
+
+
+26. Q: What is the role of the Iterator and ListIterator interfaces, and how do they differ?
+
+A: Both interfaces provide a way to iterate over a collection, but ListIterator is specific to lists and allows bidirectional traversal. It includes methods like previous() and hasPrevious() for backward traversal.
+
+
+
+
+
+
+27. Q: Can you explain the concept of fail-fast and fail-safe iterators in the context of the Collection Framework?
+
+A: Fail-fast iterators throw a ConcurrentModificationException if the underlying collection is modified while iterating. Fail-safe iterators, on the other hand, allow modifications during iteration without throwing exceptions.
+
+
+
+
+
+
+28. Q: What is the purpose of the Collections.synchronizedList() method, and when might it be useful?
+
+A: Collections.synchronizedList() returns a synchronized (thread-safe) view of the specified list. It can be useful in scenarios where multiple threads need to access and modify the same list concurrently.
+
+
+
+
+
+
+29. Q: How does the Comparator interface relate to the Comparable interface in Java?
+
+A: The Comparable interface is implemented by a class to define its natural ordering, while the Comparator interface allows external comparison logic to be applied to objects, providing flexibility in sorting.
+
+
+
+
+
+30. Q: Explain the concept of autoboxing and unboxing in the context of collections.
+
+A: Autoboxing is the automatic conversion of a primitive data type to its corresponding wrapper class, and unboxing is the reverse process. In collections, autoboxing allows primitives to be used in generic classes that require objects, and unboxing extracts the primitive value when needed.
+
+
+
+

@@ -1,0 +1,161 @@
+1. Q: Explain the difference between ArrayList and LinkedList.
+
+A: ArrayList uses a dynamic array to store elements, allowing fast random access, while LinkedList uses a doubly-linked list, making it more efficient for frequent insertions and deletions.
+
+
+
+
+2. Q: What is the underlying data structure used by ArrayList for storage?
+
+A: ArrayList uses a dynamic array to store elements. The array is resized dynamically as needed.
+
+
+
+
+3. Q: Why might you choose to use LinkedList over ArrayList in certain scenarios?
+
+A: LinkedList is preferable when there are frequent insertions and deletions, as it has constant-time complexity for these operations, unlike ArrayList.
+
+
+
+
+
+4. Q: In what situations might you choose to use ArrayList over LinkedList?
+
+A: ArrayList is more suitable when there are frequent random access operations, as it provides constant-time access to elements based on their index.
+
+
+
+
+5. Q: What is the key advantage of using the Vector class over ArrayList?
+
+A: Vector is synchronized, making it thread-safe. However, this synchronization can introduce performance overhead.
+
+
+
+
+
+
+6. Q: What is the primary drawback of using Vector compared to ArrayList?
+
+A: The main drawback is that the entire Vector is synchronized, which can impact performance in a multi-threaded environment.
+
+
+
+
+
+
+7. Q: How does LinkedList support both List and Deque interfaces?
+
+A: LinkedList implements both List and Deque interfaces by providing methods for list-specific operations (e.g., get, add, remove) and deque-specific operations (e.g., offer, poll, peek).
+
+
+
+
+
+
+8. Q: What is the role of the Stack class, and how does it differ from other List implementations?
+
+A: Stack is a subclass of Vector that represents a last-in, first-out (LIFO) stack of objects. It provides methods like push and pop. However, it's recommended to use Deque methods for a stack-like behavior.
+
+
+
+
+
+
+9. Q: How does ArrayList handle the scenario when it needs to grow beyond its current capacity?
+
+A: When an ArrayList exceeds its current capacity, it is resized by creating a new array with a larger capacity and copying the elements from the old array to the new one.
+
+
+
+
+10. Q: What is the role of the subList() method in the List interface, and which classes support it?
+A: The `subList()` method returns a view of the portion of the list between the specified `fromIndex` (inclusive) and `toIndex` (exclusive). All classes implementing the `List` interface, including `ArrayList`, `LinkedList`, and `Vector`, support this method.
+
+
+
+
+
+11. Q: Explain the purpose of the ensureCapacity() method in ArrayList.
+A: The `ensureCapacity()` method is used to increase the capacity of an `ArrayList` instance. It ensures that the underlying array can accommodate a specified number of elements without needing to resize during subsequent insertions.
+
+
+
+
+12. Q: What advantages does the LinkedList class offer in terms of adding elements to the beginning or middle of the list?
+A: `LinkedList` provides constant-time complexity for adding elements to the beginning or middle of the list because it involves updating pointers, unlike `ArrayList` where shifting elements might be required.
+
+
+
+
+
+13. Q: How does the Vector class handle resizing when it exceeds its capacity?
+A: Similar to `ArrayList`, `Vector` is resized by creating a new array with a larger capacity and copying the elements from the old array to the new one when it exceeds its current capacity.
+
+
+
+
+
+
+14. Q: Can you explain the difference between pop() and peek() methods in the Stack class?
+A: Both methods return the top element of the stack, but `pop()` removes that element from the stack, whereas `peek()` only returns it without removing.
+
+
+
+
+
+15. Q: What is the primary reason for using Vector over ArrayList in a multi-threaded environment?
+A: `Vector` is synchronized, meaning it is thread-safe. This ensures that multiple threads can safely access and modify a `Vector` instance without external synchronization.
+
+
+
+
+
+16. Q: How does the subList() method of ArrayList differ from subList() in LinkedList?
+A: The `subList()` method in both `ArrayList` and `LinkedList` returns a view of the list, but the underlying data structures affect the performance of operations like `get`, `add`, and `remove`. For `ArrayList`, these operations are generally faster.
+
+
+
+
+
+
+17. Q: Explain the significance of the trimToSize() method in the ArrayList class.
+A: The `trimToSize()` method reduces the capacity of an `ArrayList` instance to its current size. This can be useful to minimize memory usage when the list is not expected to grow further.
+
+
+
+
+
+
+
+18. Q: How does the clone() method in the Vector class differ from clone() in the ArrayList class?
+A: The `clone()` method in both classes creates a shallow copy of the list, but the key difference is that `Vector`'s `clone()` method is synchronized, providing thread safety for the cloned instance.
+
+
+
+
+
+
+
+19. Q: Can you explain how the set() method works in the List interface, and provide an example using ArrayList?
+A: The `set(index, element)` method replaces the element at the specified index with the specified element. Example:
+
+A: The `set(index, element)` method replaces the element at the specified index with the specified element. Example:
+ArrayList<String> list = new ArrayList<>();
+list.add("Java");
+list.add("C++");
+list.set(1, "Python"); // Replaces "C++" with "Python"
+
+
+
+
+
+20. Q: How does the toArray() method in the List interface differ from toArray() in the ArrayList class?
+A: The `toArray()` method in the `List` interface returns an array containing all elements of the list in the same order, while the `toArray()` method in `ArrayList` allows you to pass an array as an argument to be filled with elements, potentially avoiding array creation.
+
+
+
+
+
+
